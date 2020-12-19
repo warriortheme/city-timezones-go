@@ -7,7 +7,7 @@
 * https://datasift.github.io/gitflow/IntroducingGitFlow.html:[Introducing GitFlow]
 * https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac:[gitflow-breakdown.md]
 
-<<<<<<< HEAD
+HEAD ??
 ## rebase
 * https://stackoverflow.com/questions/16666089/whats-the-difference-between-git-merge-and-git-rebase/16666418#16666418:[What's the difference between 'git merge' and 'git rebase'?]
 * 
@@ -21,4 +21,3 @@ https://stackoverflow.com/questions/35703556/what-does-it-mean-to-squash-commits
 * 
 =======
 Change from github #1
->>>>>>> cd3c83d3410ec42ea59c93fd4e9e4161825e1a0b
