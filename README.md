@@ -3,6 +3,10 @@
 [![Go Reference](https://pkg.go.dev/badge/github.com/richoandika/city-timezones-go.svg)](https://pkg.go.dev/github.com/richoandika/city-timezones-go)
 [![Go Report Card](https://goreportcard.com/badge/github.com/richoandika/city-timezones-go)](https://goreportcard.com/report/github.com/richoandika/city-timezones-go)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![CI](https://github.com/richoandika/city-timezones-go/workflows/CI/badge.svg)](https://github.com/richoandika/city-timezones-go/actions)
+[![Release](https://img.shields.io/github/release/richoandika/city-timezones-go.svg)](https://github.com/richoandika/city-timezones-go/releases)
+[![Go Version](https://img.shields.io/badge/Go-1.21%2B-blue.svg)](https://golang.org/)
+[![Coverage](https://codecov.io/gh/richoandika/city-timezones-go/branch/main/graph/badge.svg)](https://codecov.io/gh/richoandika/city-timezones-go)
 
 A fast and efficient Go library for looking up timezone information by city name, with support for partial matching, ISO code lookups, and flexible search options.
 
@@ -197,21 +201,41 @@ make build
 
 ### Project Structure
 
+This project follows the [Go Standard Project Layout](https://github.com/golang-standards/project-layout):
+
 ```
 city-timezones-go/
-├── cmd/
-│   └── citytimezones/          # CLI application
-├── examples/
-│   ├── basic/                  # Basic usage examples
-│   └── advanced/               # Advanced usage examples
-├── internal/
-│   └── city/                   # Internal city package
-├── pkg/
-│   └── citytimezones/          # Public API package
-├── data/
-│   └── cityMap.json           # City data
-├── Makefile                   # Build automation
-└── README.md
+├── .github/                    # GitHub configuration
+│   ├── workflows/             # GitHub Actions CI/CD
+│   ├── ISSUE_TEMPLATE/        # Issue templates
+│   └── CODEOWNERS            # Code ownership
+├── build/                     # Build and packaging
+│   ├── ci/                   # CI configurations
+│   └── package/              # Packaging scripts
+├── cmd/                      # Main applications
+│   └── citytimezones/        # CLI application
+├── configs/                  # Configuration templates
+├── data/                     # Application data
+│   └── cityMap.json         # City timezone data
+├── deployments/              # Deployment configurations
+├── docs/                     # Design and user documents
+├── examples/                 # Application examples
+│   ├── basic/               # Basic usage examples
+│   └── advanced/            # Advanced usage examples
+├── internal/                 # Private application code
+│   └── city/                # Internal city package
+├── pkg/                      # Library code for external use
+│   └── citytimezones/        # Public API package
+├── scripts/                  # Scripts for build, install, etc.
+├── test/                     # Additional external test apps
+├── tools/                    # Supporting tools
+├── assets/                   # Other assets (images, logos, etc.)
+├── .goreleaser.yml          # Release automation
+├── Makefile                 # Build automation
+├── CONTRIBUTING.md          # Contribution guidelines
+├── CHANGELOG.md             # Project changelog
+├── SECURITY.md              # Security policy
+└── README.md                # This file
 ```
 
 ### Running Tests

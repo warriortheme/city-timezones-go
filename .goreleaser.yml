@@ -1,0 +1,96 @@
+# GoReleaser configuration for automated releases
+# https://goreleaser.com
+
+project_name: city-timezones-go
+
+# Build configuration
+builds:
+  - id: citytimezones
+    binary: citytimezones
+    main: ./cmd/citytimezones
+    goos:
+      - linux
+      - darwin
+      - windows
+    goarch:
+      - amd64
+      - arm64
+    goarm:
+      - 6
+      - 7
+    ldflags:
+      - -s -w
+      - -X main.version={{.Version}}
+      - -X main.commit={{.Commit}}
+      - -X main.date={{.Date}}
+    env:
+      - CGO_ENABLED=0
+
+# Archive configuration
+archives:
+  - id: citytimezones
+    name_template: "{{ .ProjectName }}_{{ .Version }}_{{ .Os }}_{{ .Arch }}"
+    format: tar.gz
+    format_overrides:
+      - goos: windows
+        format: zip
+    files:
+      - README.md
+      - LICENSE
+      - CHANGELOG.md
+      - CONTRIBUTING.md
+      - SECURITY.md
+
+# Checksums
+checksum:
+  name_template: "{{ .ProjectName }}_{{ .Version }}_checksums.txt"
+  algorithm: sha256
+
+# Homebrew formula
+brews:
+  - name: citytimezones
+    description: "Fast and efficient Go library for looking up timezone information by city name"
+    homepage: "https://github.com/richoandika/city-timezones-go"
+    license: "MIT"
+    skip_upload: false
+    test: |
+      system "#{bin}/citytimezones -help"
+    install: |
+      bin.install "citytimezones"
+
+# GitHub release configuration
+release:
+  github:
+    owner: richoandika
+    name: city-timezones-go
+  draft: false
+  prerelease: false
+  mode: replace
+  header: |
+    ## What's Changed
+    Full Changelog: https://github.com/richoandika/city-timezones-go/compare/{{ .PreviousTag }}...{{ .Tag }}
+  footer: |
+    ## Installation
+    
+    ### Using Go
+    ```bash
+    go get github.com/richoandika/city-timezones-go
+    ```
+    
+    ### Using Homebrew (macOS)
+    ```bash
+    brew install richoandika/tap/citytimezones
+    ```
+    
+    ### Download Binary
+    Download the appropriate binary for your platform from the assets below.
+
+# Changelog configuration
+changelog:
+  sort: asc
+  filters:
+    exclude:
+      - '^docs:'
+      - '^test:'
+      - '^ci:'
+      - '^build:'
